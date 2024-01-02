@@ -26,6 +26,7 @@ class HBNBCommand(cmd.Cmd):
                'State': State, 'City': City, 'Amenity': Amenity,
                'Review': Review
               }
+
     def do_quit(self, line):
         """Quit command to exit the program
         """
@@ -53,7 +54,7 @@ class HBNBCommand(cmd.Cmd):
             if not line:
                 raise SyntaxError()
             my_list = line.split(" ")
-            obj= HBNBCommand.classes[my_list[0]]()
+            obj = HBNBCommand.classes[my_list[0]]()
             for element in my_list[1:]:
                 key, val = element.split('=')
                 val = val.replace('_', ' ')

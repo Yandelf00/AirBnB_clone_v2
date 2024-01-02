@@ -39,7 +39,6 @@ class DBStorage:
         if env == 'test':
             Base.metadata.drop_all(self.__engine)
 
-
     def all(self, cls=None):
         """Returns a dictionary of models currently in storage"""
         classes = {
